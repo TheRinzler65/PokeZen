@@ -60,8 +60,8 @@ export const mdxComponents = {
 export function ArticleReader() {
   const { gameId, chapterSlug } = useParams();
 
-  const game = allGamesGuides[gameId as keyof typeof allGamesGuides];
-  const chapter = game?.chapters.find((c) => c.slug === chapterSlug);
+  const game = allGamesGuides[gameId as keyof typeof allGamesGuides] as any;
+  const chapter = game?.chapters?.find((c: any) => c.slug === chapterSlug);
 
   if (!game || !chapter) {
     return (
