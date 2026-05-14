@@ -45,7 +45,7 @@ export function Games() {
                 {gamesByGeneration[gen].map((game: any) => (
                   <Link
                     key={game.id}
-                    to={`/jeux/${game.id}`}
+                    to={`/guides/${game.id}`}
                     className="group relative bg-white dark:bg-slate-900 rounded-[2rem] border-2 border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                   >
                     <div className="flex items-center gap-4">

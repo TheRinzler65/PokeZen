@@ -40,7 +40,7 @@ export function Home() {
               </Link>
 
               <Link
-                to="/jeux"
+                to="/guides"
                 className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 px-8 py-4 rounded-2xl font-bold hover:border-red-500 hover:text-red-500 transition-all shadow-sm"
               >
                 <BookOpen className="w-5 h-5" />

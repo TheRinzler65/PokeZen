@@ -30,7 +30,7 @@ export function GameHub() {
           <p className="text-3xl font-black text-slate-400 dark:text-slate-600">
             Jeu introuvable
           </p>
-          <Link to="/jeux" className="text-red-600 font-bold hover:underline">
+          <Link to="/guides" className="text-red-600 font-bold hover:underline">
             Retour à la liste des jeux
           </Link>
         </div>
@@ -69,7 +69,7 @@ export function GameHub() {
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             {game.mainLinks?.text && (
               <Link
-                to={`/jeux/${game.id}/soluce/${game.mainLinks.text}`}
+                to={`/guides/${game.id}/soluce/${game.mainLinks.text}`}
                 className="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-2xl font-black text-lg hover:bg-red-700 hover:scale-105 transition-all shadow-xl shadow-red-500/20"
               >
                 <BookOpen className="w-6 h-6" />
@@ -115,7 +115,7 @@ export function GameHub() {
                   {category.links?.map((link: any, linkIndex: number) => (
                     <li key={linkIndex}>
                       <Link
-                        to={`/jeux/${game.id}/soluce/${link.slug}`}
+                        to={`/guides/${game.id}/soluce/${link.slug}`}
                         className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 dark:hover:bg-red-500/10 text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 transition-all font-bold"
                       >
                         <ChevronRight className="w-5 h-5 opacity-40 shrink-0" />
