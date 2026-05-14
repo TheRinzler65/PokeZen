@@ -13,6 +13,8 @@ import { ArticleReader } from "@/pages/ArticleReader";
 
 import { Navigation } from "@/components/layout/Navigation";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { Footer } from "./components/layout/Footer";
+import { ScrollToTopOnNavigate } from "./components/ScrollToTopOnNavigate";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+        <ScrollToTopOnNavigate />
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 font-sans antialiased selection:bg-red-500/20">
           <Navigation />
 
@@ -27,19 +30,20 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/find" element={<FindPokemon />} />
-              <Route path="/jeux" element={<Games />} />
-              <Route path="/jeux/:gameId" element={<GameHub />} />
+              <Route path="/guides" element={<Games />} />
+              <Route path="/guides/:gameId" element={<GameHub />} />
               <Route path="/outils" element={<Outils />} />
               <Route path="/outils/checklist" element={<PokedexTracker />} />
               <Route path="/outils/team-builder" element={<TeamBuilder />} />
               <Route path="/outils/nuzlocke" element={<NuzlockeTracker />} />
               <Route
-                path="/jeux/:gameId/soluce/:chapterSlug"
+                path="/guides/:gameId/soluce/:chapterSlug"
                 element={<ArticleReader />}
               />
             </Routes>
           </main>
 
+          <Footer />
           <ScrollToTop />
         </div>
       </BrowserRouter>
