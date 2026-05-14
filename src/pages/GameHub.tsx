@@ -21,7 +21,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function GameHub() {
   const { gameId } = useParams();
-  const game = allGamesGuides[gameId as keyof typeof allGamesGuides];
+  const game = allGamesGuides[gameId as keyof typeof allGamesGuides] as any;
 
   if (!game) {
     return (
@@ -30,6 +30,9 @@ export function GameHub() {
           <p className="text-3xl font-black text-slate-400 dark:text-slate-600">
             Jeu introuvable
           </p>
+          <Link to="/jeux" className="text-red-600 font-bold hover:underline">
+            Retour à la liste des jeux
+          </Link>
         </div>
       </div>
     );
@@ -109,7 +112,7 @@ export function GameHub() {
 
               <div className="p-3">
                 <ul className="space-y-1">
-                  {category.links.map((link: any, linkIndex: number) => (
+                  {category.links?.map((link: any, linkIndex: number) => (
                     <li key={linkIndex}>
                       <Link
                         to={`/jeux/${game.id}/soluce/${link.slug}`}

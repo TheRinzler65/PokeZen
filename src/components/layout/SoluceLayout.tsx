@@ -29,7 +29,7 @@ export function SoluceLayout({
           </Link>
           <ChevronRight className="h-4 w-4 mx-2 shrink-0 opacity-50" />
           <Link
-            to={`/jeux/${gameId}`}
+            to={`/guides/${gameId}`}
             className="hover:text-red-600 dark:hover:text-red-400 transition-colors capitalize shrink-0"
           >
             {gameTitle}
@@ -68,7 +68,7 @@ export function SoluceLayout({
               return (
                 <li key={chap.slug}>
                   <Link
-                    to={`/jeux/${gameId}/soluce/${chap.slug}`}
+                    to={`/guides/${gameId}/soluce/${chap.slug}`}
                     className={`block px-4 py-3 rounded-xl transition-all font-bold ${
                       isActive
                         ? "bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 border-l-4 border-red-500"
