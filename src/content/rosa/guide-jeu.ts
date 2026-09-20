@@ -10,7 +10,7 @@ export const rosaGuide = {
     "https://www.pokebip.com/pages/jeuxvideo/pokemon_rubis_omega_saphir_alpha/logo.png",
   mainLinks: {
     text: "partie-1-le-depart",
-    video: "https://youtube.com/playlist?list=PL_MET_TON_LIEN_ICI",
+    video: "https://youtube.com/",
   },
   categories: [
     {

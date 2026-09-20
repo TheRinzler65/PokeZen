@@ -10,11 +10,40 @@
   --radius: 0.5rem;
 }
 
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-border: var(--brand-border);
+  --color-tool-finder: var(--tool-finder);
+  --color-tool-finder-foreground: var(--tool-finder-foreground);
+  --color-tool-finder-muted: var(--tool-finder-muted);
+  --color-tool-finder-border: var(--tool-finder-border);
+  --color-tool-team: var(--tool-team);
+  --color-tool-team-foreground: var(--tool-team-foreground);
+  --color-tool-team-muted: var(--tool-team-muted);
+  --color-tool-team-border: var(--tool-team-border);
+  --color-tool-pokedex: var(--tool-pokedex);
+  --color-tool-pokedex-foreground: var(--tool-pokedex-foreground);
+  --color-tool-pokedex-muted: var(--tool-pokedex-muted);
+  --color-tool-pokedex-border: var(--tool-pokedex-border);
+  --color-tool-nuzlocke: var(--tool-nuzlocke);
+  --color-tool-nuzlocke-foreground: var(--tool-nuzlocke-foreground);
+  --color-tool-nuzlocke-muted: var(--tool-nuzlocke-muted);
+  --color-tool-nuzlocke-border: var(--tool-nuzlocke-border);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
     --font-heading: var(--font-sans);
     --font-sans: 'Geist Variable', sans-serif;
+    --color-brand: oklch(0.577 0.245 27.325);
+    --color-brand-foreground: oklch(0.985 0 0);
+    --color-tool-finder: oklch(0.577 0.245 27.325);
+    --color-tool-team: oklch(0.623 0.214 259.815);
+    --color-tool-pokedex: oklch(0.627 0.194 149.214);
+    --color-tool-nuzlocke: oklch(0.541 0.281 303.9);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -88,6 +117,27 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+
+    --brand: oklch(0.55 0.25 27);
+    --brand-foreground: oklch(1 0 0);
+    --brand-muted: oklch(0.95 0.05 27);
+    --brand-border: oklch(0.85 0.15 27);
+    --tool-finder: oklch(0.55 0.25 27);
+    --tool-finder-foreground: oklch(1 0 0);
+    --tool-finder-muted: oklch(0.95 0.05 27);
+    --tool-finder-border: oklch(0.85 0.15 27);
+    --tool-team: oklch(0.55 0.2 240);
+    --tool-team-foreground: oklch(1 0 0);
+    --tool-team-muted: oklch(0.95 0.05 240);
+    --tool-team-border: oklch(0.85 0.15 240);
+    --tool-pokedex: oklch(0.6 0.18 145);
+    --tool-pokedex-foreground: oklch(1 0 0);
+    --tool-pokedex-muted: oklch(0.95 0.05 145);
+    --tool-pokedex-border: oklch(0.85 0.15 145);
+    --tool-nuzlocke: oklch(0.55 0.25 300);
+    --tool-nuzlocke-foreground: oklch(1 0 0);
+    --tool-nuzlocke-muted: oklch(0.95 0.05 300);
+    --tool-nuzlocke-border: oklch(0.85 0.15 300);
 }
 
 .dark {
@@ -122,6 +172,27 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+
+    --brand: oklch(0.6 0.25 27);
+    --brand-foreground: oklch(0.1 0 0);
+    --brand-muted: oklch(0.3 0.1 27);
+    --brand-border: oklch(0.45 0.15 27);
+    --tool-finder: oklch(0.6 0.25 27);
+    --tool-finder-foreground: oklch(0.1 0 0);
+    --tool-finder-muted: oklch(0.3 0.1 27);
+    --tool-finder-border: oklch(0.45 0.15 27);
+    --tool-team: oklch(0.6 0.2 240);
+    --tool-team-foreground: oklch(0.1 0 0);
+    --tool-team-muted: oklch(0.3 0.1 240);
+    --tool-team-border: oklch(0.45 0.15 240);
+    --tool-pokedex: oklch(0.65 0.18 145);
+    --tool-pokedex-foreground: oklch(0.1 0 0);
+    --tool-pokedex-muted: oklch(0.3 0.1 145);
+    --tool-pokedex-border: oklch(0.45 0.15 145);
+    --tool-nuzlocke: oklch(0.6 0.25 300);
+    --tool-nuzlocke-foreground: oklch(0.1 0 0);
+    --tool-nuzlocke-muted: oklch(0.3 0.1 300);
+    --tool-nuzlocke-border: oklch(0.45 0.15 300);
 }
 
 @layer base {

@@ -60,7 +60,7 @@ export function PokedexTracker() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 py-16 px-4">
       <div className="max-w-7xl mx-auto mb-12 text-center">
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-slate-900 dark:text-white">
-          Pokédex <span className="text-green-500">Tracker</span>
+          Pokédex <span className="text-tool-pokedex">Tracker</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto">
           Cochez vos captures. Votre progression est sauvegardée
@@ -70,21 +70,21 @@ export function PokedexTracker() {
 
       <div className="max-w-5xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border-2 border-slate-200 dark:border-slate-800 shadow-sm mb-12">
         <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
-          <div className="w-20 h-20 bg-green-50 dark:bg-green-500/10 rounded-full flex items-center justify-center shrink-0 border-4 border-green-100 dark:border-green-900/30">
-            <Trophy className="w-10 h-10 text-green-500" />
+          <div className="w-20 h-20 bg-tool-pokedex-muted rounded-full flex items-center justify-center shrink-0 border-4 border-tool-pokedex-border">
+            <Trophy className="w-10 h-10 text-tool-pokedex" />
           </div>
           <div className="flex-1 w-full text-center md:text-left">
             <div className="flex justify-between items-end mb-3">
               <span className="text-2xl font-black text-slate-900 dark:text-white">
                 Progression Globale
               </span>
-              <span className="text-2xl font-black text-green-500">
+              <span className="text-2xl font-black text-tool-pokedex">
                 {captured.length} / {allPokemon.length}
               </span>
             </div>
             <div className="h-6 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden border border-slate-200 dark:border-slate-700">
               <div
-                className="h-full bg-green-500 transition-all duration-1000 ease-out"
+                className="h-full bg-tool-pokedex transition-all duration-1000 ease-out"
                 style={{ width: `${progressPercentage}%` }}
               />
             </div>
@@ -101,7 +101,7 @@ export function PokedexTracker() {
               placeholder="Rechercher un Pokémon ou un numéro..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-14 h-14 text-lg rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-bold focus-visible:ring-green-500 focus-visible:border-green-500"
+              className="pl-14 h-14 text-lg rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-bold focus-visible:ring-tool-pokedex focus-visible:border-tool-pokedex"
             />
           </div>
           <div className="flex bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl border-2 border-slate-200 dark:border-slate-700 shrink-0">
@@ -135,13 +135,13 @@ export function PokedexTracker() {
               onClick={() => toggleCapture(pokemon.id)}
               className={`relative flex flex-col items-center p-4 rounded-3xl border-2 cursor-pointer transition-all duration-300 group ${
                 isCaptured
-                  ? "bg-green-50 dark:bg-green-500/10 border-green-500 shadow-md shadow-green-500/10"
-                  : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-green-300 dark:hover:border-green-700"
+                  ? "bg-tool-pokedex-muted border-tool-pokedex shadow-md shadow-tool-pokedex/10"
+                  : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-tool-pokedex/50"
               }`}
             >
               <div className="absolute top-3 right-3 transition-transform group-hover:scale-110">
                 {isCaptured ? (
-                  <CheckCircle2 className="w-6 h-6 text-green-500 fill-green-100 dark:fill-green-900/50" />
+                  <CheckCircle2 className="w-6 h-6 text-tool-pokedex fill-tool-pokedex-muted" />
                 ) : (
                   <Circle className="w-6 h-6 text-slate-300 dark:text-slate-700" />
                 )}

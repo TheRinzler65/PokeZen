@@ -15,9 +15,9 @@ export function Outils() {
       description:
         "Recherchez un Pokémon pour tout savoir sur ses statistiques et ses lieux d'apparition exacts.",
       icon: Search,
-      color: "text-red-500",
-      bg: "bg-red-50 dark:bg-red-500/10",
-      border: "hover:border-red-500/50",
+      color: "text-tool-finder",
+      bg: "bg-tool-finder-muted",
+      border: "hover:border-tool-finder-border",
       isReady: true,
       path: "/find",
     },
@@ -27,9 +27,9 @@ export function Outils() {
       description:
         "Créez votre équipe de 6 Pokémon et analysez instantanément vos faiblesses, résistances et immunités.",
       icon: Swords,
-      color: "text-blue-500",
-      bg: "bg-blue-50 dark:bg-blue-500/10",
-      border: "hover:border-blue-500/50",
+      color: "text-tool-team",
+      bg: "bg-tool-team-muted",
+      border: "hover:border-tool-team-border",
       isReady: true,
       path: "/outils/team-builder",
     },
@@ -39,9 +39,9 @@ export function Outils() {
       description:
         "Cochez les Pokémon que vous avez capturés. Votre progression est sauvegardée automatiquement.",
       icon: ListChecks,
-      color: "text-green-500",
-      bg: "bg-green-50 dark:bg-green-500/10",
-      border: "hover:border-green-500/50",
+      color: "text-tool-pokedex",
+      bg: "bg-tool-pokedex-muted",
+      border: "hover:border-tool-pokedex-border",
       isReady: true,
       path: "/outils/checklist",
     },
@@ -51,9 +51,9 @@ export function Outils() {
       description:
         "Gérez vos runs Nuzlocke. Notez vos rencontres par route et suivez les Pokémon tombés au combat.",
       icon: ShieldAlert,
-      color: "text-purple-500",
-      bg: "bg-purple-50 dark:bg-purple-500/10",
-      border: "hover:border-purple-500/50",
+      color: "text-tool-nuzlocke",
+      bg: "bg-tool-nuzlocke-muted",
+      border: "hover:border-tool-nuzlocke-border",
       isReady: true,
       path: "/outils/nuzlocke",
     },
@@ -63,7 +63,7 @@ export function Outils() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 py-16 px-4">
       <div className="max-w-7xl mx-auto mb-16 text-center">
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-slate-900 dark:text-white">
-          La Boîte à <span className="text-red-600">Outils</span>
+          La Boîte à <span className="text-brand">Outils</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto">
           Des applications pensées par des dresseurs, pour des dresseurs.

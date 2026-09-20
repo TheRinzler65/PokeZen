@@ -130,7 +130,7 @@ export default function FindPokemon() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 py-16 px-4">
       <div className="max-w-7xl mx-auto mb-16 text-center">
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-slate-900 dark:text-white">
-          Le Pokémon <span className="text-red-600">Finder</span>
+          Le Pokémon <span className="text-brand">Finder</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto">
           Recherchez un Pokémon pour tout savoir sur ses statistiques et ses
@@ -147,7 +147,7 @@ export default function FindPokemon() {
             value={selectedVersion}
             onValueChange={setSelectedVersion}
           >
-            <SelectTrigger className="w-full h-14 rounded-xl bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-300 text-lg px-4 focus:ring-red-500">
+            <SelectTrigger className="w-full h-14 rounded-xl bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-300 text-lg px-4 focus:ring-brand">
               <SelectValue placeholder="Choisir un jeu" />
             </SelectTrigger>
             <SelectContent
@@ -155,7 +155,7 @@ export default function FindPokemon() {
               sideOffset={8}
               className="max-h-75 overflow-y-auto rounded-xl shadow-2xl border-2 border-slate-200 dark:border-slate-700"
             >
-              <SelectItem value="all" className="font-black text-red-600 py-3">
+              <SelectItem value="all" className="font-black text-brand py-3">
                 Afficher toutes les versions
               </SelectItem>
               {availableVersions.map((v) => (
@@ -170,7 +170,7 @@ export default function FindPokemon() {
 
       <div className="max-w-5xl mx-auto space-y-12">
         {!pokemonId && searchQuery ? (
-          <div className="max-w-2xl mx-auto p-6 border-2 border-red-200 dark:border-red-900/50 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-3xl text-center font-bold text-xl shadow-sm">
+          <div className="max-w-2xl mx-auto p-6 border-2 border-brand-border bg-brand-muted text-brand rounded-3xl text-center font-bold text-xl shadow-sm">
             Ce Pokémon est introuvable. Vérifiez l'orthographe !
           </div>
         ) : loadingPokemon ? (

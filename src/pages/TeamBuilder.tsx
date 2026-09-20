@@ -55,7 +55,7 @@ export function TeamBuilder() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 py-16 px-4">
       <div className="max-w-7xl mx-auto mb-12 text-center">
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-slate-900 dark:text-white">
-          Team <span className="text-blue-500">Builder</span>
+          Team <span className="text-tool-team">Builder</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto">
           Composez l'équipe de 6 Pokémon ultime pour votre aventure.
@@ -64,7 +64,7 @@ export function TeamBuilder() {
 
       <div className="max-w-5xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border-2 border-slate-200 dark:border-slate-800 shadow-sm mb-12">
         <div className="flex items-center gap-4 mb-8 border-b-2 border-slate-100 dark:border-slate-800 pb-6">
-          <div className="p-3 bg-blue-50 dark:bg-blue-500/10 rounded-2xl text-blue-500 border-2 border-blue-100 dark:border-blue-900/30">
+          <div className="p-3 bg-tool-team-muted rounded-2xl text-tool-team border-2 border-tool-team-border">
             <Swords className="w-8 h-8" />
           </div>
           <div>
@@ -85,7 +85,7 @@ export function TeamBuilder() {
                 key={index}
                 className={`relative aspect-square rounded-3xl border-4 flex flex-col items-center justify-center p-2 transition-all duration-300 ${
                   member
-                    ? "bg-blue-50 dark:bg-blue-900/20 border-blue-500 shadow-lg shadow-blue-500/10"
+                    ? "bg-tool-team-muted border-tool-team shadow-lg shadow-tool-team/10"
                     : "bg-slate-50 dark:bg-slate-800/50 border-dashed border-slate-200 dark:border-slate-700"
                 }`}
               >
@@ -102,7 +102,7 @@ export function TeamBuilder() {
                       alt={member.name}
                       className="w-20 h-20 object-contain drop-shadow-md hover:scale-110 transition-transform"
                     />
-                    <span className="font-black text-blue-700 dark:text-blue-400 text-sm truncate w-full text-center mt-2 px-1">
+                    <span className="font-black text-tool-team text-sm truncate w-full text-center mt-2 px-1">
                       {member.name}
                     </span>
                   </>
@@ -132,7 +132,7 @@ export function TeamBuilder() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             disabled={team.length >= 6}
-            className="pl-16 h-16 text-xl rounded-full border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 font-bold focus-visible:ring-blue-500 focus-visible:border-blue-500 shadow-sm disabled:opacity-50"
+            className="pl-16 h-16 text-xl rounded-full border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 font-bold focus-visible:ring-tool-team focus-visible:border-tool-team shadow-sm disabled:opacity-50"
           />
         </div>
 
@@ -143,7 +143,7 @@ export function TeamBuilder() {
                 key={pokemon.id}
                 onClick={() => addPokemon(pokemon)}
                 disabled={team.length >= 6}
-                className="flex flex-col items-center p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-3xl hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:border-slate-200 disabled:cursor-not-allowed group"
+                className="flex flex-col items-center p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-3xl hover:border-tool-team hover:shadow-lg hover:-translate-y-1 transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:border-slate-200 disabled:cursor-not-allowed group"
               >
                 <img
                   src={pokemon.sprite}
